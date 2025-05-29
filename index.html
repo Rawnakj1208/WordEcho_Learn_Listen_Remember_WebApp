@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Text to Speech Converter</title>
+  <link rel="stylesheet" href="style.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+  />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  />
+</head>
+<body>
+
+  <!--converter-->
+  <div>
+    <div class="hero">
+      <h1>Text To Speech <span>Converter</span></h1>
+      <textarea class="textw" placeholder="Write anything here...."></textarea>
+      <div class="row">
+        <select></select>
+        <button id="listen"><img src="images/play.png">Listen</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Flashcard -->
+  <div class="flashb" id="flashcard-section">
+    <div class="container">
+      <div class="add-flashcard-con">
+        <button id="add-flashcard">Add Flashcard</button>
+      </div>
+
+      <!-- Display Cards -->
+      <div id="card-con">
+        <div class="card-list-container"></div>
+      </div>
+    </div>
+
+    <!-- Form for new flashcard -->
+    <div class="question-container hide" id="add-question-card">
+      <h2>Add Flashcard</h2>
+      <div class="wrapper">
+        <div class="error-con">
+          <span class="hide" id="error">Input fields cannot be empty!</span>
+        </div>
+        <i class="fa-solid fa-xmark" id="close-btn"></i>
+      </div>
+
+      <label for="vocab">Vocabulary:</label>
+      <input type="text" id="vocab" class="input">
+
+      <label for="bangla">Bangla Meaning:</label>
+      <input type="text" id="bangla" class="input">
+
+      <label for="definition">English Definition:</label>
+      <textarea id="definition" class="input" rows="2"></textarea>
+
+      <label for="synonyms">Synonyms:</label>
+      <input type="text" id="synonyms" class="input">
+
+      <label for="antonyms">Antonyms:</label>
+      <input type="text" id="antonyms" class="input">
+
+      <button style="margin-top: 30px;" id="save-btn">Save</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+  <script src="script1.js"></script>
+</body>
+</html>
